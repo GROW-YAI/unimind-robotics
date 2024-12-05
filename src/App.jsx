@@ -1,14 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Landing from './pages/landing';
+import AboutUs from './pages/about';
+import Product from './pages/product';
+import EducationResources from './pages/education';
+import Contact from './pages/contact';
+
+
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Landing/>,
+    },
+    {
+      path: "/about-us",
+      element: <AboutUs />,
+    },
+    {
+      path: "/our-product",
+      element: <Product/>,
+    },
+    {
+      path: "/education&resources",
+      element: <EducationResources/>,
+    },
+    {
+      path: "/contact-us",
+      element: <Contact/>,
+    },
+  ])
 
   return (
     <>
-      
+      <RouterProvider router={router} />
     </>
   )
 }
