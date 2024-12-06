@@ -81,7 +81,7 @@ const Landing = () => {
                             Where we design, build, and deliver advanced robotics for educational and personal use. Our mission is to empower the next generation of thinkers and makers through innovative robotic solutions.
                         </motion.p>
                         <motion.button
-                            onClick={() => (window.location.href = "/about-us")}
+                            onClick={() => navigate("/about-us")}
                             className="bg-gradient-to-r from-[#3943F7] to-[#8DB8FD] text-white px-6 py-3 rounded-md text-base md:text-lg font-medium hover:bg-green-600"
                             initial={{ scale: 0 }}
                             whileInView={{ scale: 1 }}
