@@ -4,6 +4,7 @@ import AboutUs from './pages/about';
 import Product from './pages/product';
 import EducationResources from './pages/education';
 import Contact from './pages/contact';
+import Gallery from './pages/gallery';
 
 
 
@@ -30,6 +31,10 @@ function App() {
     {
       path: "/contact-us",
       element: <Contact/>,
+    },
+    {
+      path: "/gallery",
+      element: <Gallery/>,
     },
   ])
 

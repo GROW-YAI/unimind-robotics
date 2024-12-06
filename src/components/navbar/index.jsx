@@ -73,10 +73,10 @@ const Navbar = () => {
                                 Education & Resources
                             </Link>
                             <Link
-                                to="/blog"
+                                to="/gallery"
                                 className="block md:inline py-2 md:py-0 text-black hover:text-[#1D6205] text-center"
                             >
-                                Blog
+                                Gallery
                             </Link>
                             <Link
                                 to="/contact-us"
