@@ -47,40 +47,40 @@ const Navbar = () => {
                         <div className="flex flex-col md:flex-row md:space-x-8 md:ml-auto">
                             <Link
                                 to="/"
-                                className="block md:inline py-2 md:py-0 text-black hover:text-[#1D6205] text-center"
+                                className="block md:inline py-2 md:py-0 text-black hover:text-[#3943F7] text-center"
                             >
                                 Home
                             </Link>
 
                             <Link
                                 to="/about-us"
-                                className="block md:inline py-2 md:py-0 text-black hover:text-[#1D6205] text-center"
+                                className="block md:inline py-2 md:py-0 text-black hover:text-[#3943F7] text-center"
                             >
                                 About Us
                             </Link>
 
                             <Link
                                 to="/our-product"
-                                className="block md:inline py-2 md:py-0 text-black hover:text-[#1D6205] text-center"
+                                className="block md:inline py-2 md:py-0 text-black hover:text-[#3943F7] text-center"
                             >
                                 Product & Services
                             </Link>
 
                             <Link
                                 to="/education&resources"
-                                className="block md:inline py-2 md:py-0 text-black hover:text-[#1D6205] text-center"
+                                className="block md:inline py-2 md:py-0 text-black hover:text-[#3943F7] text-center"
                             >
                                 Education & Resources
                             </Link>
                             <Link
                                 to="/gallery"
-                                className="block md:inline py-2 md:py-0 text-black hover:text-[#1D6205] text-center"
+                                className="block md:inline py-2 md:py-0 text-black hover:text-[#3943F7] text-center"
                             >
                                 Gallery
                             </Link>
                             <Link
                                 to="/contact-us"
-                                className="block md:inline py-2 md:py-0 text-black hover:text-[#1D6205] text-center"
+                                className="block md:inline py-2 md:py-0 text-black hover:text-[#3943F7] text-center"
                             >
                                 Contact Us
                             </Link>
