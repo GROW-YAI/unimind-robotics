@@ -2,8 +2,10 @@ import Navbar from "../../components/navbar";
 import robot from "../../assets/images/robot.png";
 import rb from "../../assets/images/rb.png";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Landing = () => {
+    const navigate = useNavigate();
     return (
         <>
             <Navbar />
