@@ -10,6 +10,7 @@ import picthree from '../../assets/images/picthree.jpg';
 import picfour from '../../assets/images/picfour.jpg';
 import picfive from '../../assets/images/picfive.jpg';
 import picsix from '../../assets/images/picsix.jpg';
+import Footer from "../../components/footer";
 
 const Gallery = () => {
   return (
@@ -116,6 +117,7 @@ const Gallery = () => {
           </Swiper>
         </motion.div>
       </motion.div>
+      <Footer/>
     </>
   );
 };

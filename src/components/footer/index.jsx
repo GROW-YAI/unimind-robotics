@@ -58,24 +58,32 @@ const Footer = () => {
 
                 {/* Quick Links + Help */}
                 <div className="flex flex-col items-center md:items-start">
-                    <div className="mb-6">
-                        <h3 className="text-base font-semibold mb-4">Quick Links</h3>
+                <div className="mb-6">
+                        <h3 className="text-base font-bold mb-4">Quick Links</h3>
                         <ul className="space-y-3">
-                            {["About", "Contact", "Pricing", "Projects"].map((link, idx) => (
+                            {[
+                                { name: "Home", path: "/" },
+                                { name: "About Us", path: "/about-us" },
+                                { name: "Product & Services", path: "/our-product" },
+                                { name: "Education & Resources", path: "/education&resources" },
+                                { name: "Gallery", path: "/gallery" },
+                                { name: "Contact Us", path: "/contact-us" },
+                            ].map((link, idx) => (
                                 <li key={idx}>
-                                    <a href={`/${link.toLowerCase()}`} className="hover:underline">
-                                        {link}
+                                    <a href={link.path} className="hover:underline">
+                                        {link.name}
                                     </a>
                                 </li>
                             ))}
                         </ul>
                     </div>
+
                     <div>
-                        <h3 className="text-base font-semibold mb-4">Help</h3>
+                        <h3 className="text-base font-bold mb-4">Help</h3>
                         <ul className="space-y-3">
                             {["Privacy Policy", "Customer Support", "Terms & Conditions"].map((link, idx) => (
                                 <li key={idx}>
-                                    <a href={`/${link.toLowerCase().replace(/ /g, "-")}`} className="hover:underline">
+                                    <a href="/" className="hover:underline">
                                         {link}
                                     </a>
                                 </li>
@@ -122,7 +130,7 @@ const Footer = () => {
                         />
                         <button
                             type="submit"
-                            className="w-full p-2 md:p-3 bg-[#3943F7] text-white font-semibold rounded hover:bg-[#00C7FF]"
+                            className="w-full p-2 md:p-3 bg-[#3943F7] text-white font-semibold rounded hover:bg-[#647FFA]"
                         >
                             Send Message
                         </button>

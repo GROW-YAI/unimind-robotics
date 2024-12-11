@@ -3,6 +3,7 @@ import pic from "../../assets/images/pic.jpg";
 import { Lightbulb, BookOpen, Leaf } from "lucide-react";
 import pictwo from "../../assets/images/pictwo.jpg";
 import { motion } from "framer-motion";
+import Footer from "../../components/footer";
 
 const AboutUs = () => {
   // Animation Variants
@@ -24,7 +25,7 @@ const AboutUs = () => {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto mt-28 px-4 py-10">
+      <div className="container mx-auto m-28  px-4 py-10">
         <motion.div
           className="flex flex-col md:flex-row items-center gap-8 justify-center"
           initial="hidden"
@@ -132,6 +133,7 @@ const AboutUs = () => {
           </div>
         </motion.div>
       </div>
+      <Footer/>
     </>
   );
 };

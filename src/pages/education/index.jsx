@@ -2,6 +2,7 @@ import Navbar from "../../components/navbar";
 import pic from "../../assets/images/pic.jpg"; 
 import { Lightbulb, BookOpen, DownloadCloud } from "lucide-react"; 
 import { motion } from 'framer-motion';
+import Footer from "../../components/footer";
 
 const EducationResources = () => {
   return (
@@ -60,7 +61,7 @@ const EducationResources = () => {
 
         {/* Downloadable Resources Section */}
         <motion.div
-          className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6"
+          className=" grid grid-cols-1 md:grid-cols-3 gap-6 m-24"
           initial="hidden"
           animate="visible"
           variants={{
@@ -110,8 +111,8 @@ const EducationResources = () => {
             </p>
           </motion.div>
         </motion.div>
-
       </div>
+      <Footer/>
     </>
   );
 };

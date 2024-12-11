@@ -67,7 +67,7 @@ const Contact = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <motion.a
-            href="https://wa.me/233530235739"
+            href="https://wa.me/233553109542"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center bg-[#3943F7] rounded-full shadow-md hover:shadow-lg transition duration-300 w-24 h-24"

@@ -8,6 +8,7 @@ import picseven from '../../assets/images/picseven.jpg';
 import pictwo from '../../assets/images/pictwo.jpg';
 import pictech from '../../assets/images/pictech.jpg';
 import { motion } from 'framer-motion';
+import Footer from "../../components/footer";
 
 const Product = () => {
   const products = [
@@ -91,7 +92,7 @@ const Product = () => {
 
         {/* Services Section */}
         <motion.div
-          className="max-w-screen-xl mx-auto px-8"
+          className="max-w-screen-xl mx-auto m-24 px-8"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
@@ -119,6 +120,7 @@ const Product = () => {
           </div>
         </motion.div>
       </section>
+      <Footer/>
     </>
   );
 };
