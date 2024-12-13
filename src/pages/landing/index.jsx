@@ -3,6 +3,7 @@ import robot from "../../assets/images/robot.png";
 import rb from "../../assets/images/rb.png";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Footer from "../../components/footer";
 
 const Landing = () => {
@@ -10,6 +11,30 @@ const Landing = () => {
     const heroVariants = {
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+    };
+
+    const [showScrollButton, setShowScrollButton] = useState(false);
+
+    // Handle scroll events to toggle button visibility
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 200) {
+                setShowScrollButton(true);
+            } else {
+                setShowScrollButton(false);
+            }
+        };
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    // Scroll to top logic
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
     };
 
     return (
@@ -134,7 +159,7 @@ const Landing = () => {
                                 visible: {
                                     opacity: 1,
                                     transition: {
-                                        staggerChildren: 0.3, // Delays between card animations
+                                        staggerChildren: 0.3, 
                                     },
                                 },
                             }}
@@ -247,6 +272,20 @@ const Landing = () => {
                     </div>
                 </motion.div>
             </div>
+
+             {/* Scroll to Top Button */}
+             {showScrollButton && (
+                <motion.button
+                    onClick={scrollToTop}
+                    className="fixed bottom-5 right-5 bg-[#3943F7] text-white p-4 rounded-full shadow-lg hover:bg-[#8DB8FD] focus:outline-none"
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3 }}
+                    whileHover={{ scale: 1.1 }}
+                >
+                    ↑
+                </motion.button>
+            )}
 
             <Footer />
         </>

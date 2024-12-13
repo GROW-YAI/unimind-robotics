@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 import logo from "../../assets/images/logo.png";
 import tiktok from "../../assets/images/tiktok.png";
-
+import { toast } from 'react-toastify';
 
 const Footer = () => {
     const form = useRef();
@@ -13,19 +13,23 @@ const Footer = () => {
 
         emailjs
             .sendForm(
-                "service_aolldap", // Replace with your EmailJS service ID
+                "service_aolldap",
                 "template_85i29g8",
                 form.current,
-                "hmMEo4Y3ESD6Nf9Sj" // Replace with your EmailJS public key
+                "hmMEo4Y3ESD6Nf9Sj"
             )
             .then(
                 (result) => {
-                    console.log(result.text);
-                    alert("Message sent successfully!");
+                    console.log("Email sent successfully:", result.text);
+                    toast.success("Message sent successfully!"), {
+                        style: { backgroundColor: '#3943F7', color: '#fff' }
+                    }
                 },
                 (error) => {
-                    console.log(error.text);
-                    alert("Failed to send message. Please try again later.");
+                    console.error("Error sending email:", error.text);
+                    toast.error("Failed to send message. Please try again later."), {
+                        style: { backgroundColor: '#3943F7', color: '' }
+                    }
                 }
             );
     };
@@ -43,11 +47,11 @@ const Footer = () => {
                     <h3 className="text-base font-semibold mb-3">Social Media</h3>
 
                     <div className="flex space-x-4">
-                        {[ 
+                        {[
                             { Icon: Facebook, url: "https://www.facebook.com/share/fm2WZBCYWFD5ncWA/?mibextid=LQQJ4d" },
                             { Icon: Linkedin, url: "https://www.linkedin.com/in/richard-osei-5aa83724a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
                             { Icon: () => <img src={tiktok} alt="TikTok" className="w-5 h-5" />, url: "https://www.tiktok.com/@mcblay2?_t=8s6HzM7h2G6&_r=1" },
-                            { Icon: Youtube, url: "https://www.youtube.com/@mcblay521" } 
+                            { Icon: Youtube, url: "https://www.youtube.com/@mcblay521" }
                         ].map(({ Icon, url, hoverClass = "hover:bg-white hover:text-[#3943F7]" }, idx) => (
                             <a key={idx} href={url} target="_blank" rel="noopener noreferrer" className={`p-2 rounded border border-white ${hoverClass}`}>
                                 <Icon />
@@ -58,7 +62,7 @@ const Footer = () => {
 
                 {/* Quick Links + Help */}
                 <div className="flex flex-col items-center md:items-start">
-                <div className="mb-6">
+                    <div className="mb-6">
                         <h3 className="text-base font-bold mb-4">Quick Links</h3>
                         <ul className="space-y-3">
                             {[
@@ -105,28 +109,28 @@ const Footer = () => {
                             name="user_name"
                             placeholder="Your Name"
                             required
-                            className="w-full p-2 md:p-3 bg-gray-50 text-[#3943F7] placeholder-gray-400 rounded focus:outline-none"
+                            className="w-full p-2 md:p-3 bg-gray-50 text-black placeholder-gray-400 rounded focus:outline-none"
                         />
                         <input
                             type="email"
                             name="user_email"
                             placeholder="Email"
                             required
-                            className="w-full p-2 md:p-3 bg-gray-50 text-[#3943F7] placeholder-gray-400 rounded focus:outline-none"
+                            className="w-full p-2 md:p-3 bg-gray-50 text-black placeholder-gray-400 rounded focus:outline-none"
                         />
                         <input
                             type="text"
                             name="user_phone"
                             placeholder="Phone"
                             required
-                            className="w-full p-2 md:p-3 bg-gray-50 text-[#3943F7] placeholder-gray-400 rounded focus:outline-none"
+                            className="w-full p-2 md:p-3 bg-gray-50 text-black placeholder-gray-400 rounded focus:outline-none"
                         />
                         <textarea
                             name="message"
                             placeholder="Message"
                             rows="4"
                             required
-                            className="w-full p-2 md:p-3 bg-gray-50 text-[#3943F7] placeholder-gray-400 rounded focus:outline-none"
+                            className="w-full p-2 md:p-3 bg-gray-50 text-black placeholder-gray-400 rounded focus:outline-none"
                         />
                         <button
                             type="submit"

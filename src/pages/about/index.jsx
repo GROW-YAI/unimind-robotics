@@ -3,6 +3,7 @@ import pic from "../../assets/images/pic.jpg";
 import { Lightbulb, BookOpen, Leaf } from "lucide-react";
 import pictwo from "../../assets/images/pictwo.jpg";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import Footer from "../../components/footer";
 
 const AboutUs = () => {
@@ -21,6 +22,30 @@ const AboutUs = () => {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
   };
+
+  const [showScrollButton, setShowScrollButton] = useState(false);
+
+    // Handle scroll events to toggle button visibility
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 200) {
+                setShowScrollButton(true);
+            } else {
+                setShowScrollButton(false);
+            }
+        };
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    // Scroll to top logic
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
 
   return (
     <>
@@ -88,6 +113,7 @@ const AboutUs = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
         >
+          
           {/* Background Image */}
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -96,6 +122,7 @@ const AboutUs = () => {
             <div className="absolute inset-0 bg-[#3943F7] opacity-50"></div>{" "}
             {/* Dark overlay */}
           </div>
+
           {/* Content */}
           <div className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mx-auto max-w-5xl z-10">
             {[
@@ -133,6 +160,19 @@ const AboutUs = () => {
           </div>
         </motion.div>
       </div>
+       {/* Scroll to Top Button */}
+       {showScrollButton && (
+                <motion.button
+                    onClick={scrollToTop}
+                    className="fixed bottom-5 right-5 bg-[#3943F7] text-white p-4 rounded-full shadow-lg hover:bg-[#8DB8FD] focus:outline-none"
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3 }}
+                    whileHover={{ scale: 1.1 }}
+                >
+                    ↑
+                </motion.button>
+            )}
       <Footer/>
     </>
   );
