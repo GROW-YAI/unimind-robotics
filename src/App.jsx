@@ -8,36 +8,24 @@ import Gallery from './pages/gallery';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
+import AppLayout from './components/appLayout';
 
 
 
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/",
-      element: <Landing />,
+      element: <AppLayout />,
+      children: [
+        { path: "/", element: <Landing /> },
+        { path: "/about-us", element: <AboutUs /> },
+        { path: "/our-product", element: <Product /> },
+        { path: "/education&resources", element: <EducationResources /> },
+        { path: "/contact-us", element: <Contact /> },
+        { path: "/gallery", element: <Gallery /> },
+      ],
     },
-    {
-      path: "/about-us",
-      element: <AboutUs />,
-    },
-    {
-      path: "/our-product",
-      element: <Product />,
-    },
-    {
-      path: "/education&resources",
-      element: <EducationResources />,
-    },
-    {
-      path: "/contact-us",
-      element: <Contact />,
-    },
-    {
-      path: "/gallery",
-      element: <Gallery />,
-    },
-  ])
+  ]);
 
   return (
     <>
@@ -53,10 +41,9 @@ function App() {
         draggable
         pauseOnHover
         theme="light"
-        toastClassName="custom-toast"  
-        progressClassName="custom-progress" 
+        toastClassName="custom-toast"
+        progressClassName="custom-progress"
       />
-
     </>
   )
 }

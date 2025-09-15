@@ -19,14 +19,12 @@ const Footer = () => {
                 "hmMEo4Y3ESD6Nf9Sj"
             )
             .then(
-                (result) => {
-                    console.log("Email sent successfully:", result.text);
+                () => {
                     toast.success("Message sent successfully!"), {
                         style: { backgroundColor: '#3943F7', color: '#fff' }
                     }
                 },
-                (error) => {
-                    console.error("Error sending email:", error.text);
+                () => {
                     toast.error("Failed to send message. Please try again later."), {
                         style: { backgroundColor: '#3943F7', color: '' }
                     }
