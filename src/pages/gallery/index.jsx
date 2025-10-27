@@ -11,7 +11,13 @@ import picthree from '../../assets/images/picthree.jpg';
 import picfour from '../../assets/images/picfour.jpg';
 import picfive from '../../assets/images/picfive.jpg';
 import picsix from '../../assets/images/picsix.jpg';
+import IMG4 from '../../assets/images/IMG4.jpg';
+import IMG8 from '../../assets/images/IMG8.jpg';
+import IMG9 from '../../assets/images/IMG9.jpg';
+import IMG10 from '../../assets/images/IMG10.jpg';
+import IMG19 from '../../assets/images/IMG19.jpg';
 import Footer from "../../components/footer";
+import { i } from "framer-motion/client";
 
 const Gallery = () => {
 
@@ -133,8 +139,83 @@ const Gallery = () => {
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src={picsix}
+                  src={IMG4}
                   alt="Gallery Image 4"
+                  className="w-full h-80 md:h-96 object-contain rounded-lg"
+                />
+              </motion.div>
+            </SwiperSlide>
+
+            {/* Slide 5 */}
+            <SwiperSlide>
+              <motion.div
+                className="relative"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img
+                  src={IMG8}
+                  alt="Gallery Image 5"
+                  className="w-full h-80 md:h-96 object-contain rounded-lg"
+                />
+              </motion.div>
+            </SwiperSlide>
+
+            {/* Slide 6 */}
+            <SwiperSlide>
+              <motion.div
+                className="relative"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img
+                  src={IMG9}
+                  alt="Gallery Image 6"
+                  className="w-full h-80 md:h-96 object-contain rounded-lg"
+                />
+              </motion.div>
+            </SwiperSlide>
+
+            {/* Slide 7 */}
+            <SwiperSlide>
+              <motion.div
+                className="relative"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img
+                  src={IMG10}
+                  alt="Gallery Image 7"
+                  className="w-full h-80 md:h-96 object-contain rounded-lg"
+                />
+              </motion.div>
+            </SwiperSlide>
+
+            {/* Slide 8 */}
+            <SwiperSlide>
+              <motion.div
+                className="relative"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img
+                  src={IMG19}
+                  alt="Gallery Image 8"
+                  className="w-full h-80 md:h-96 object-contain rounded-lg"
+                />
+              </motion.div>
+            </SwiperSlide>
+
+            {/* Slide 9 */}
+            <SwiperSlide>
+              <motion.div
+                className="relative"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img
+                  src={picsix}
+                  alt="Gallery Image 9"
                   className="w-full h-80 md:h-96 object-contain rounded-lg"
                 />
               </motion.div>
