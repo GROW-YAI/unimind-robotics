@@ -47,7 +47,7 @@ const Footer = () => {
                     <div className="flex space-x-4">
                         {[
                             { Icon: Facebook, url: "https://www.facebook.com/share/fm2WZBCYWFD5ncWA/?mibextid=LQQJ4d" },
-                            { Icon: Linkedin, url: "https://www.linkedin.com/in/richard-osei-5aa83724a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
+                            { Icon: Linkedin, url: "https://www.linkedin.com/in/unimind-robotics-5aa83724a/" },
                             { Icon: () => <img src={tiktok} alt="TikTok" className="w-5 h-5" />, url: "https://www.tiktok.com/@mcblay2?_t=8s6HzM7h2G6&_r=1" },
                             { Icon: Youtube, url: "https://www.youtube.com/@mcblay521" }
                         ].map(({ Icon, url, hoverClass = "hover:bg-white hover:text-[#3943F7]" }, idx) => (
@@ -80,7 +80,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div>
+                    {/* <div>
                         <h3 className="text-base font-bold mb-4">Help</h3>
                         <ul className="space-y-3">
                             {["Privacy Policy", "Customer Support", "Terms & Conditions"].map((link, idx) => (
@@ -91,7 +91,7 @@ const Footer = () => {
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Contact Form */}
