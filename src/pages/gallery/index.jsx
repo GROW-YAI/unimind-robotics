@@ -6,7 +6,6 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import Navbar from "../../components/navbar";
 import picthree from '../../assets/images/picthree.jpg';
 import picfour from '../../assets/images/picfour.jpg';
 import picfive from '../../assets/images/picfive.jpg';
@@ -16,7 +15,6 @@ import IMG8 from '../../assets/images/IMG8.jpg';
 import IMG9 from '../../assets/images/IMG9.jpg';
 import IMG10 from '../../assets/images/IMG10.jpg';
 import IMG19 from '../../assets/images/IMG19.jpg';
-import Footer from "../../components/footer";
 import { i } from "framer-motion/client";
 
 const Gallery = () => {
@@ -46,7 +44,6 @@ const Gallery = () => {
     };
   return (
     <>
-      <Navbar />
       <motion.div
         className="bg-gray-100 min-h-screen mt-28 py-10 px-6 md:px-12"
         initial={{ opacity: 0 }}
@@ -237,8 +234,6 @@ const Gallery = () => {
                     ↑
                 </motion.button>
             )}
-
-      <Footer/>
     </>
   );
 };

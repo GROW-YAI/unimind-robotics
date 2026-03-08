@@ -1,12 +1,10 @@
 import { motion } from "framer-motion";
-import Navbar from "../../components/navbar";
 import { MapPin, Mail, Phone, Users } from "lucide-react";
 import whatsapp from "../../assets/images/whatsapp.png";
 
 const Contact = () => {
   return (
     <>
-      <Navbar />
       <motion.div
         className="bg-gradient-to-r from-[#3943F7] to-[#8DB8FD] text-white py-16 px-6 mt-28"
         initial={{ opacity: 0 }}

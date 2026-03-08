@@ -1,10 +1,8 @@
-import Navbar from "../../components/navbar";
 import robot from "../../assets/images/robot.png";
 import rb from "../../assets/images/rb.png";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Footer from "../../components/footer";
 
 const Landing = () => {
     const navigate = useNavigate();
@@ -39,7 +37,6 @@ const Landing = () => {
 
     return (
         <>
-            <Navbar />
             {/* Hero Section */}
             <motion.div
                 className="bg-gradient-to-r from-[#3943F7] to-[#8DB8FD] min-h-screen flex flex-col justify-center items-center md:flex-row px-5 md:px-10 overflow-x-hidden"
@@ -286,8 +283,6 @@ const Landing = () => {
                     ↑
                 </motion.button>
             )}
-
-            <Footer />
         </>
     );
 };

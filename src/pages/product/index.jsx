@@ -1,4 +1,3 @@
-import Navbar from "../../components/navbar";
 import aboutpic from '../../assets/images/aboutpic.jpg';
 import picthree from '../../assets/images/picthree.jpg';
 import IMG3 from '../../assets/images/IMG3.jpg';
@@ -20,7 +19,6 @@ import IMG17 from '../../assets/images/IMG17.jpg';
 import { motion } from 'framer-motion';
 import { useState, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import Footer from "../../components/footer";
 
 
 
@@ -103,7 +101,6 @@ const Product = () => {
 
   return (
     <>
-      <Navbar />
       <section className="bg-gray-100 py-16">
         <div className="max-w-screen-xl mx-auto px-8 mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex gap-2 items-center">
@@ -227,8 +224,6 @@ const Product = () => {
                     ↑
                 </motion.button>
             )}
-
-      <Footer/>
     </>
   );
 };
