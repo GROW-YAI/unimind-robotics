@@ -1,10 +1,11 @@
+import React, { Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Landing from './pages/landing';
-import AboutUs from './pages/about';
-import Product from './pages/product';
-import EducationResources from './pages/education';
-import Contact from './pages/contact';
-import Gallery from './pages/gallery';
+const Landing = React.lazy(() => import('./pages/landing'));
+const AboutUs = React.lazy(() => import('./pages/about'));
+const Product = React.lazy(() => import('./pages/product'));
+const EducationResources = React.lazy(() => import('./pages/education'));
+const Contact = React.lazy(() => import('./pages/contact'));
+const Gallery = React.lazy(() => import('./pages/gallery'));
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
@@ -27,9 +28,11 @@ function App() {
     },
   ]);
 
-  return (
+return (
     <>
-      <RouterProvider router={router} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <RouterProvider router={router} />
+      </Suspense>
       <ToastContainer
         position="top-right"
         autoClose={8000}
