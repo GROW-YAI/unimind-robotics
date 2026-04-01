@@ -1,9 +1,7 @@
-import Navbar from "../../components/navbar";
 import pic from "../../assets/images/pic.jpg"; 
 import { Lightbulb, BookOpen, DownloadCloud } from "lucide-react"; 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from "react";
-import Footer from "../../components/footer";
 
 const EducationResources = () => {
 
@@ -33,7 +31,6 @@ const EducationResources = () => {
 
   return (
     <>
-      <Navbar />
       <div className="container mx-auto mt-28 px-4 py-10">
         <div className="flex flex-col md:flex-row items-center gap-8 justify-center">
           {/* Left Section: Text */}
@@ -152,8 +149,6 @@ const EducationResources = () => {
                     ↑
                 </motion.button>
             )}
-            
-      <Footer/>
     </>
   );
 };

@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // added
-import Navbar from "../../components/navbar";
-import Footer from "../../components/footer";
 import { useCart } from "../../context/CartContext";
 
 export default function CartPage() {
@@ -35,7 +33,6 @@ export default function CartPage() {
 
   return (
     <>
-      <Navbar />
       <main className="max-w-screen-xl mx-auto px-8 py-12">
         <h1 className="text-2xl font-bold mb-6 text-[#3943F7]">Your Cart</h1>
 
@@ -99,7 +96,6 @@ export default function CartPage() {
           </div>
         )}
       </main>
-      <Footer />
     </>
   );
 }
